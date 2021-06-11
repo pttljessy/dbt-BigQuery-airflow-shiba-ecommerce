@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: daily_order_count
+    description: "A daily order count dbt model"
+    columns:
+      - name: shipping_date
+        description: "shipping date"
+        tests:
+          - unique
+          - not_null
+      - name: num_orders
+        description: "the number of orders"
+        tests:
+          - not_null
